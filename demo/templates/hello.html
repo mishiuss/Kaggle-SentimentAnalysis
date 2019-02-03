@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Sentiment Analysis Demo</title>
+<head><h1>Demonstration of the sentiment analysis of reviews </h1></head>
+
+<form action="{{ url_for('index') }}" method=post>
+    <dl>
+        <dt>Enter the text (RUS): <br>
+        <dd><textarea name=text rows=10 cols=50>{{ text }}</textarea>
+        <dd><input type=submit value="Analyze">
+    </dl>
+</form>
+
+<br>Sentiment prediction:<br>
+{{ prediction_message }} {{ prob }}
